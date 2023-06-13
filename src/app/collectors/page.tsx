@@ -60,14 +60,16 @@ const Dashboard = () => {
           <div className="max-w-2xl mx-auto px-4 sm:py-12 sm:px-6 lg:max-w-full lg:px-8">
             <div className="grid grid-cols-1 gap-y-10 gap-x-3 sm:grid-cols-5 lg:grid-cols-5 xl:gap-x-8">
               {items.map((item, index) => (
-                <MenuButton
-                  title={item.titulo}
-                  img={'/images/' + item.icono}
-                  onMouseClick={() => {
-                    router.push('/collectors' + item.ruta);
-                  }}
-                />
-              ))}
+                  <MenuButton
+                    key={index}
+                    title={item.titulo}
+                    img={'/images/' + item.icono}
+                    onMouseClick={() => {
+                      router.push('/collectors' + item.ruta);
+                    }}
+                  />
+                ))
+              }
             </div>
           </div>
         </div>

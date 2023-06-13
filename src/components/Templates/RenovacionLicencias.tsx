@@ -91,42 +91,37 @@ const LocalInformation = () => (
 
   </View>
 );
-const Footer = ()=> { 
-
+const Footer = () => {
   return (
     <View>
       <Text>
         Nota: En caso de NO indicar medio idóneo conforme la Ley de Notificaciones Judiciales, los documentos emitidos por la administración municipal, quedarán notificados con el transcurso de VEINTICUATRO HORAS de dictado, conforme a lo que expresa el art. 11 de la Ley 8687.
-          ---------------------------------------------------------------------------------------------------------------------
-          Teléfono: (506) 2220-6698 Fax: (506) 2771-2105
-  Correo electrónico: patentes@mpz.go.cr Apartado postal: 274-8000
-        </Text>
+        ---------------------------------------------------------------------------------------------------------------------
+        Teléfono: (506) 2220-6698 Fax: (506) 2771-2105
+        Correo electrónico: patentes@mpz.go.cr Apartado postal: 274-8000
+      </Text>
+    </View>
   );
-
 }
+
 
 
 const RevonacionLicencias = (prop: IRevonacionLicencias) => {
-  const { name, date, footer, adjudicacion, renovacion , cedula } = prop
+  const { name, date, footer, adjudicacion, renovacion, cedula } = prop;
   return (
     <Document>
       <Page style={templateStyles.body}>
-        <Header/>
+        <Header />
         <Text style={templateStyles.title}>
-          SOLICITUD DE RENOVACIÓN LICENCIA MUNICIPAL
-EXPLOTACIÓN DE CANTERAS O CAUCES DE DOMINIO PÚBLICO
+          SOLICITUD DE RENOVACIÓN LICENCIA MUNICIPAL EXPLOTACIÓN DE CANTERAS O CAUCES DE DOMINIO PÚBLICO
         </Text>
-        Por este medio yo,{name}
-          cédula N° {cedula},solicito se renueve la(s) licencia(es), con las siguientes características
-       <LocalInformation/>
-        <Text style={templateStyles.boxText}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, inventore, tempora dolorem esse minima distinctio rerum maiores minus eos eveniet error at quos laborum laudantium in! Quisquam dolorum nemo veritatis?
-        </Text>
-        {/* FOOTER */}
-       <Footer/>
-      </Page>
+        Por este medio yo, {name} cédula N° {cedula}, solicito se renueve la(s) licencia(es), con las siguientes características
+        <LocalInformation />
+        {/* Resto del código */}
+        </Page>
     </Document>
   );
-}
+};
+  
 
 export default RevonacionLicencias;

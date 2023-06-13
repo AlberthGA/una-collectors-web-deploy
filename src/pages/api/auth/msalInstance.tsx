@@ -3,11 +3,11 @@ import axios from "axios";
 
 const msalConfig = {
   auth: {
-    clientId: process.env.NEXT_PUBLIC_AZURE_AD_CLIENT_ID ,
-    authority: `https://login.microsoftonline.com/${process.env.NEXT_PUBLIC_AZURE_AD_TENANT_ID}`,
-    redirectUri:process.env.NEXT_PUBLIC_AZURE_AD_REDIRECT_URI,
-    clientSecret: process.env.NEXT_PUBLIC_AZURE_AD_CLIENT_SECRET,
-    audience: "https://graph.microsoft.com/me/appRoleAssignments"
+    clientId: process.env.NEXT_PUBLIC_AZURE_AD_CLIENT_ID as string ,
+    authority: `https://login.microsoftonline.com/${process.env.NEXT_PUBLIC_AZURE_AD_TENANT_ID}`as string,
+    redirectUri:process.env.NEXT_PUBLIC_AZURE_AD_REDIRECT_URI as string,
+    clientSecret: process.env.NEXT_PUBLIC_AZURE_AD_CLIENT_SECRET as string,
+    audience: "https://graph.microsoft.com/me/appRoleAssignments" as string
   },
   cache: {
     cacheLocation: 'sessionStorage',

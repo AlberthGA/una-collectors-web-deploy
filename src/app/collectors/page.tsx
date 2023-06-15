@@ -11,7 +11,7 @@ interface FormularioData {
 
 async function getItems(): Promise<FormularioData[]> {
   try {
-    const url = new URL('http://localhost:3000/api/formularios/');
+    const url = new URL('https://una-collectors-web-deploy.vercel.app/api/formularios/');
     const headers = {
       'Content-Type': 'application/json',
       'authorization': `Bearer ${localStorage.getItem("token")}`,

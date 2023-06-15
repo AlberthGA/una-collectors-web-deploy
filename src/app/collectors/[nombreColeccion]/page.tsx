@@ -18,7 +18,7 @@ interface FormularioData {
 
 async function getItems(page: number, limit: number, fields: string[], colName: string): Promise<TableData[]> {
   try {
-    const url = new URL(`http://localhost:3000/api/${colName}/byFilter`);
+    const url = new URL(`https://una-collectors-web-deploy.vercel.app/api/${colName}/byFilter`);
     const headers = {
       'Content-Type': 'application/json',
       'authorization': `Bearer ${localStorage.getItem("token")}`,
@@ -43,7 +43,7 @@ async function getItems(page: number, limit: number, fields: string[], colName: 
 
 async function getFormularioData(): Promise<FormularioData[]> {
   try {
-    const url = new URL('http://localhost:3000/api/formularios');
+    const url = new URL('https://una-collectors-web-deploy.vercel.app/api/formularios');
     const headers = {
       'Content-Type': 'application/json',
       'authorization': `Bearer ${localStorage.getItem("token")}`,

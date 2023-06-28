@@ -36,3 +36,17 @@ table > tbody:empty:before {
     top: 50%;
     transform: translateY(-30%);
 }
+@layer utilities {
+  .a4-size {
+    max-width: 210mm;
+    padding-left: 0.67in;
+    padding-right: 0.67in;
+    padding-top: 0.43in;
+    padding-bottom: 0.67in;
+    
+  }
+
+  .scrollbar-invisible::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+}

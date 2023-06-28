@@ -22,6 +22,7 @@
     "encoding": "^0.1.13",
     "eslint": "8.38.0",
     "eslint-config-next": "^13.4.2",
+    "handlebars": "^4.7.7",
     "jose": "^4.14.4",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.0.5",
@@ -33,7 +34,8 @@
     "pspdfkit": "^2023.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.8.0"
+    "react-icons": "^4.8.0",
+    "react-to-print": "^2.14.13"
   },
   "devDependencies": {
     "@types/jquery": "^3.5.16",
@@ -47,5 +49,10 @@
     "tailwindcss": "^3.3.2",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
+  },
+  "browser": {
+    "fs": false,
+    "os": false,
+    "path": false
   }
 }

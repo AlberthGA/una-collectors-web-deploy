@@ -11,7 +11,7 @@ interface FormularioData {
 
 async function getItems(): Promise<FormularioData[]> {
   try {
-    const url = new URL('https://una-collectors-web-deploy.vercel.app/api/formularios/');
+    const url = new URL('http://localhost:3000/api/formularios/');
     const headers = {
       'Content-Type': 'application/json',
       'authorization': `Bearer ${localStorage.getItem("token")}`,
@@ -38,7 +38,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     fetchItems();
-  });
+  }, []);
 
   async function fetchItems() {
     try {
@@ -49,6 +49,7 @@ const Dashboard = () => {
       setIsLoading(false);
     }
   }
+  
   return (
     <div className="max-w-full mx-auto sm:px-6 sm:py-12 lg:px-2">
       {isLoading ? (
@@ -60,16 +61,15 @@ const Dashboard = () => {
           <div className="max-w-2xl mx-auto px-4 sm:py-12 sm:px-6 lg:max-w-full lg:px-8">
             <div className="grid grid-cols-1 gap-y-10 gap-x-3 sm:grid-cols-5 lg:grid-cols-5 xl:gap-x-8">
               {items.map((item, index) => (
-                  <MenuButton
-                    key={index}
-                    title={item.titulo}
-                    img={'/images/' + item.icono}
-                    onMouseClick={() => {
-                      router.push('/collectors' + item.ruta);
-                    }}
-                  />
-                ))
-              }
+                <MenuButton
+                  key={index}
+                  title={item.titulo}
+                  img={'/images/' + item.icono}
+                  onMouseClick={() => {
+                    router.push('/collectors' + item.ruta);
+                  }}
+                />
+              ))}
             </div>
           </div>
         </div>
